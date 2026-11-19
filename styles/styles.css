@@ -1,0 +1,40 @@
+/* mobile styles first! */
+
+:root{
+    --text-color:rgb(30,30,30);
+    --back-color:rgb(225,225,225);
+}
+@media (prefers-color-scheme: dark){
+
+
+   
+    :root{
+    --text-color:rgb(225,225,225);
+    --back-color:rgb(30,30,30);
+}}
+
+@media (color-gamut: p3){
+    :root{
+        --text-color:oklch(0.7 0.1603 107.47);
+    }
+}
+html{
+/* for easy math for fonts*/
+    font-size: 10px;
+    background-color:var(--back-color);
+    color:var(--text-color);
+}
+
+
+h1{
+
+    font-size:2em;
+}
+
+h3{
+    font-size:2.2em;
+}
+
+p{
+    font-size:1.6em;
+}
