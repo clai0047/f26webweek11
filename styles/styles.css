@@ -18,6 +18,8 @@
         --text-color:oklch(0.7 0.1603 107.47);
     }
 }
+
+
 html{
 /* for easy math for fonts*/
     font-size: 10px;
@@ -34,7 +36,40 @@ h1{
 h3{
     font-size:2.2em;
 }
-
+@media print{
+    /*styles specifically for printers*/
+}
 p{
     font-size:1.6em;
+    color:azure;
+    background:darkblue;
+
+    padding:40px;
+    border-radius: 30px;
+    
+}
+@supports (corner-shape:bevel){
+    p{
+        border: radius 40px;
+        corner-shape: bevel;
+    }
+}
+@media (hover:none){
+
+}
+a{
+    color: chartreuse;
+}
+
+a:hover{
+    color: bisque;
+}
+/*you can set media queries with ems or rms, so they will respond to changes in font size*/
+@media screen and (min width:768){
+    h1{
+        font-size:3.6em;
+    }
+    h2{
+        font-size:2.4em;
+    }
 }
